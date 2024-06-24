@@ -1,0 +1,33 @@
+main .position-textH {
+    position: fixed;
+    color: rgb(189, 195, 21);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    border: 0px solid white;
+    font-size: 25px;
+    padding: 10pxs;
+}
+
+section .position-border {
+    position: fixed;
+    transform: translate(-50%,-50%);
+    border: 3px solid rgb(190, 166, 42);
+    text-align: center;
+    top: 46%;
+    left: 50%;
+    padding: 15px;
+    
+}
+
+section nav a {
+    text-decoration: none;
+    color: rgb(190, 166, 42);
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+section nav ul {
+    list-style-type: none;
+}

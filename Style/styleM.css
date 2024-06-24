@@ -1,0 +1,211 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(16, 0, 65);
+    min-height: 100vh;
+    font-family: "poppins", sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: -1;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    padding: 0.5rem 0rem;
+}
+
+.container {
+    max-width: 1980px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0rem 1.5rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .mainP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0rem 0.4rem;
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 2.5px;
+    color: white;
+    padding: 0.7rem 1rem;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+header .button {
+    display: none;
+}
+
+/* @media (max-width: 1100px) {
+    aside {
+        display: none;
+    }
+} */
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0rem 1rem;
+    }
+}
+
+@media (max-width: 840px) {
+    header nav ul li a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        letter-spacing: 2.5px;
+        color: white;
+        padding: 0.7rem 0.5rem;
+    }
+}
+
+@media (max-width: 740px) {
+    header nav ul {
+        display:  none;
+    }
+
+    header .button {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: auto;
+        height: auto;
+        background: black;
+        top: 70px;
+        left: -100%;
+        z-index: 10;
+        transition: all 0.5s ease-in;
+    }
+
+    header nav ul.displaynav {
+        left: 0;
+    }
+
+.button {
+    background: rgb(0, 0, 0);
+    border: 0;
+    width: 56px;
+    height: 56px;
+    place-items: center;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.6;
+    scale: 0.9;
+    border-radius: 8px;
+    transition: 0.25s;
+  }
+  
+.button:hover {
+  opacity: 1;
+  background: #000000;
+}
+
+.burger {
+  position: relative;
+  width: 32px;
+  border: 0;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  display: block;
+  border-radius: 2px;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.burger::before {
+  top: -8px;
+}
+
+.burger::after {
+  top: 8px;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transform: scaleY(0.8) scaleX(1.2);
+}
+
+.burger-6.is-closed.hamRotate {
+  transform: rotate(45deg) scale(1.2);
+}
+
+.line {
+  fill: none;
+  transition: 0.4s;
+  stroke: white;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+.burger-6.is-closed.ham1 .top {
+  stroke-dashoffset: -98px;
+}
+.burger-6.is-closed.ham1 .bottom {
+  stroke-dashoffset: -138px;
+}
+}
